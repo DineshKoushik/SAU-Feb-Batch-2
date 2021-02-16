@@ -1,0 +1,51 @@
+create table category(
+     Ccode INTEGER NOT NULL,
+     Cname VARCHAR(50) NOT NULL,
+     primary key(Ccode));
+
+create table product(
+     Pcode INTEGER NOT NULL,
+     Pname VARCHAR(50) NOT NULL,
+     Unit_price DECIMAL NOT NULL,
+     Ccode INTEGER NOT NULL,
+     primary key(Pcode));
+
+create table customer(
+    cusid INTEGER NOT NULL,
+    cusname VARCHAR(50) NOT NULL,
+    dob DATE NOT NULL,
+    gender CHAR(1) NOT NULL,
+    mobile_no VARCHAR(13) NOT NULL,
+    lcode INTEGER NOT NULL,
+    CONSTRAINT CHECK(gender IN ('M', 'F')),
+    primary key(cusid));
+
+
+create table location(
+   lcode INTEGER NOT NULL, 
+   lname VARCHAR(50) NOT NULL, 
+   primary key(lcode));
+
+CREATE TABLE purchase(
+seid INT NOT NULL,
+Pcode INT NOT NULL,
+Cusid INT NOT NULL,
+DOP DATE NOT NULL,
+units_no INT NOT NULL,
+primary key(seid,Pcode,cusid,DOP));
+
+create table sales_exec(
+seid INTEGER NOT NULL,
+sename VARCHAR(50) NOT NULL, 
+dob DATE NOT NULL, 
+gender CHAR(1) NOT NULL,
+CONSTRAINT CHECK (gender IN ('M', 'F')),
+mobile_no VARCHAR(13) NOT NULL, 
+primary key(seid));
+
+ALTER TABLE product ADD FOREIGN KEY (Ccode) REFERENCES category(Ccode);
+ALTER TABLE customer ADD FOREIGN KEY (lcode) REFERENCES location(lcode);
+ALTER TABLE location ADD FOREIGN KEY (seid) REFERENCES sales_exec(seid);
+ALTER TABLE purchase ADD FOREIGN KEY (Pcode) REFERENCES product(Pcode);
+ALTER TABLE purchase ADD FOREIGN KEY (seid) REFERENCES sales_exec(seid);
+ALTER TABLE purchase ADD FOREIGN KEY (cusid) REFERENCES customer(cusid);

@@ -1,0 +1,1 @@
+select s.seid,s.sename,s.dob,s.gender,s.mobile_no,sum(units_no) as total_count from purchase p join sales_exec s on p.seid = s.seid group by s.seid;

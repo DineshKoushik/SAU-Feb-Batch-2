@@ -1,0 +1,39 @@
+INSERT INTO category VALUES(1,"chocolate");
+INSERT INTO category VALUES(2,"icecream");
+INSERT INTO category VALUES(3,"cake");
+
+INSERT INTO product VALUES(101,"dairymilk",60,1);
+INSERT INTO product VALUES(102,"kitkat",20,1);
+INSERT INTO product VALUES(103,"vanilla",50,2);
+INSERT INTO product VALUES(104,"butterscotch",60,2);
+INSERT INTO product VALUES(105,"redvelvet",70,3);
+INSERT INTO product VALUES(106,"blackforest",80,3);
+
+INSERT INTO location VALUES(1001, 'Hyderabad');
+INSERT INTO location VALUES(1002, 'Nizamabad');
+INSERT INTO location VALUES(1003, 'Karimnagar');
+
+
+INSERT INTO customer VALUES(2001, "Anvesh", '1999-07-29','M', '9515684532', 1001);
+INSERT INTO customer VALUES(2002, "Deekshith", '1999-07-16', 'M', '9586457821', 1002);
+INSERT INTO customer VALUES(2003, "Rohith", '1998-02-07', 'M', '9873214556', 1002);
+INSERT INTO customer VALUES(2004, "Bhanu", '1999-06-14', 'M', '9632587412', 1003);
+INSERT INTO customer VALUES(2005, "Chaitanya", '1999-07-29', 'M', '9512365748', 1001);
+
+
+INSERT INTO sales_exec VALUES(3001, "Exec1",'1993-06-01', 'M', '9852369456');
+INSERT INTO sales_exec VALUES(3002, "Exec2",'1993-06-02', 'M', '9841275589');
+INSERT INTO sales_exec VALUES(3003, "Exec3",'1993-06-03', 'M', '9158269357');
+
+
+INSERT INTO purchase VALUES(3001, 101, 2001, '2021-02-01', 1);
+INSERT INTO purchase VALUES(3001, 102, 2001, '2021-02-02', 2);
+INSERT INTO purchase VALUES(3001, 103, 2005, '2021-02-02', 2);
+INSERT INTO purchase VALUES(3002, 104, 2004, '2021-02-11', 1);
+INSERT INTO purchase VALUES(3002, 105, 2003, '2021-02-11', 1);
+INSERT INTO purchase VALUES(3002, 106, 2002, '2021-02-11', 1);
+INSERT INTO purchase VALUES(3003, 106, 2002, '2021-02-12', 2);
+INSERT INTO purchase VALUES(3003, 105, 2003, '2021-02-13', 1);
+INSERT INTO purchase VALUES(3003, 104, 2005, '2021-02-13', 2);
+INSERT INTO purchase VALUES(3001, 103, 2004, '2021-02-14', 1);
+INSERT INTO purchase VALUES(3002, 102, 2005, '2021-02-14', 2);

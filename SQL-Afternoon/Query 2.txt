@@ -1,0 +1,2 @@
+SELECT pd.Pname,p.DOP from product pd join purchase p on pd.Pcode = p.Pcode where DOP between '2021-02-07' and '2021-02-13' group by DOP order by DOP,units_no desc;
+
