@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>HTML Form</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="" placeholder="Name" required><br><br>
+    <label for="rollno">Roll No.:</label>
+    <input type="number" id="rollno" name="rollno" value="" placeholder="Roll no." required><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="" placeholder="abc@gmail.com"><br><br>
+    <label for="occupation">Occupation:</label>
+    <input type="text" id="occupation" name="occupation" value="" placeholder="Occupation"><br><br>
+    <label for="Age">Age:</label>
+    <input type="number" id="age" name="age" value="" placeholder="Age"><br><br>
+    <label for="gender">Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+    <label for="DOB">DOB:</label>
+    <input type="date" id="dob" name="dob" value=""><br><br>
+    <input type="submit" value="Submit" onclick="submit()"><br><br>
+    <p id=print1></p>
+
+    <input type="number" id="get" placeholder="enter roll number">
+    <button type="button" onclick="get()">get details</button>
+    <p id="print"></p>
+
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
