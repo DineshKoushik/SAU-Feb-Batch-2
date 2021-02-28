@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="container" style="width: 100%">
+      <div id="left" style="float: left; width: 40%">
+        <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()" novalidate>
+          <fieldset>
+            <label><b>FirstName:</b></label
+            ><br /><br />
+            <input
+              id="fname"
+              placeholder="First Name"
+              formControlName="fname"
+              value=""
+              type="text"
+            /><br />
+            <span class="error" *ngIf="fname?.invalid && fname?.touched"
+              >First Name is Required!</span
+            ><br />
+            <label><b>LastName:</b></label
+            ><br /><br />
+            <input
+              id="lname"
+              placeholder="Last Name"
+              formControlName="lname"
+              value=""
+              type="text"
+            /><br /><br />
+            <label><b>ContactNumber:</b></label
+            ><br /><br />
+            <input
+              id="number"
+              formControlName="number"
+              placeholder="Number"
+              value=""
+              type="number"
+            /><br />
+            <span class="error" *ngIf="number?.invalid && number?.touched"
+              >Contact Number is Required!</span
+            ><br />
+            <label><b>DOB:</b></label
+            ><br /><br />
+            <input id="dob" formControlName="dob" type="Date" /><br /><br />
+            <label><b>City:</b></label
+            ><br /><br />
+            <input
+              id="City"
+              placeholder="City"
+              formControlName="city"
+              value=""
+              type="text"
+            /><br /><br />
+            <label><b>PinCode:</b></label
+            ><br /><br />
+            <input
+              id="pin"
+              placeholder="Pin Code"
+              formControlName="pin"
+              value=""
+              type="number"
+            /><br /><br />
+            <button type="submit" [disabled]="!loginForm.valid">
+              Register
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div id="right" style="float: right; width: 60%">
+        <table class="table">
+          <thead class="table-head">
+            <tr>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>Contact</th>
+              <th>DOB</th>
+              <th>City</th>
+              <th>Pin</th>
+              <th style="color: red">Action</th>
+            </tr>
+          </thead>
+          <tbody class="table body">
+            <tr *ngFor="let user of details">
+              <td>{{ user.fname }}</td>
+              <td>{{ user.lname }}</td>
+              <td>{{ user.number }}</td>
+              <td>{{ user.dob }}</td>
+              <td>{{ user.city }}</td>
+              <td>{{ user.pin }}</td>
+              <td>
+                <img
+                  (click)="onDeleteRecord(user)"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABQ0lEQVRIid2VPW6DQBCF32C4AoIifQpyAYSboFTGBVLOEMmcIF3S5gL4EpYoSJpIThPEBeIivYtFXAF7J81asiMw2CQSyZModpk3H8PsD/DXRV2CROA9Anj45nyy0+z+ZIAIPO76dXWyn7ODnFqfZGdLBB6fUsmx+F+vYBgAMRnPitA1d+MidE0xGc9+BCCmXgTimCttWYSuWYSuyZW2BHEspl7U5tfbAkiXC660GQCHK22pph0AK9LloncFVpKX2NI1CB8qsQPgcyT1GyvJy96AJtF22+kUaAUUoWtixG9gXAFYqedyY/DrfuPPBvBGu8XunxvSJ0P6CuKod/0AdprFYIrIkL6V5KWV5CUZ0gdTZKdZ3OZvXUUAYL+8z/fHqrnzhvADDWMnDxrQ1IM1gIsTL5913WRtBSxx12RoSq48/1Bf4TpwkBD0MPMAAAAASUVORK5CYII="
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

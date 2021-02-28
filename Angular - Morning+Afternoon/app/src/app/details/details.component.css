@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+}
+
+input.ng-invalid {
+  border-left: 5px solid red;
+}
+
+input.ng-valid {
+  border-left: 5px solid green;
+}
+
+.error {
+  color: red;
+}
+
+fieldset {
+  background-color: #eeeeee;
+  align-self: center;
+  margin-left: 10%;
+  margin-right: 30%;
+  margin-top: 15%;
+}
+
+.table {
+  margin-top: 15%;
+  background-color: rgb(44, 43, 43);
+  color: white;
+  border-collapse: collapse;
+  align-content: center;
+  align-items: center;
+  box-sizing: content-box;
+  margin-left: 15%;
+  font-family: sans-serif;
+  min-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-style thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table-style th,
+.table-style td {
+  padding: 12px 15px;
+}
