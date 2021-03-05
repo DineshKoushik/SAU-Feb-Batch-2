@@ -1,0 +1,25 @@
+<h2> Sign up Form</h2>
+<div class="container">
+    <form action="">
+        <div class="row">
+
+
+            <div class="col">
+
+                <input type="text" name="username" [(ngModel)]="user.fName" placeholder="First name" required> <br> <br>
+                <input type="text" name="username" [(ngModel)]="user.lName" placeholder="Last name" required> <br> <br>
+                <input type="text" name="username" [(ngModel)]="user.age" placeholder="Age" required> <br> <br>
+                <input type="text" name="username" [(ngModel)]="user.dob" placeholder="Dob" required> <br> <br>
+                <input type="text" name="username" [(ngModel)]="user.username" placeholder="Username" required> <br>
+                <br>
+                <input type="email" name="username" [(ngModel)]="user.email" placeholder="Email" required> <br> <br>
+                <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" required> <br>
+                <br>
+                <input type="password" name="password" [(ngModel)]="confirmpassword" placeholder="Confirm password"
+                    required> <br> <br>
+                <input type="submit" (click)="submit()" value="Login">
+
+            </div>
+        </div>
+    </form>
+</div>

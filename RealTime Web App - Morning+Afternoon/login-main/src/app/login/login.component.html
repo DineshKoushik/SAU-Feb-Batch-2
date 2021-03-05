@@ -1,0 +1,17 @@
+<h2> Login Form</h2>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+
+      
+      <div class="col">
+       
+
+        <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required> <br> <br>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required>  <br> <br>
+        <input type="submit" (click)="submit()" value="Login">
+      </div>
+      
+    </div>
+  </form>
+</div>
